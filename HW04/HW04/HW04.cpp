@@ -44,7 +44,14 @@ int main()
 	archInit.changeYearsExperience(100);
 	archInit.print();
 
-	cout<<checkPhoneNumbers(empInit, progInit)<<endl;
+	cout << checkPhoneNumbers(empInit, progInit) << endl;
+	cout << (empInit == empInit) << endl;
+	empInit.changePhoneNumber("949-111-2094");
+	cout << checkPhoneNumbers(empInit, progInit) << endl;
+	cout << (empDefault == empInit) << endl;
+
+	empInit.addAge(4);
+	empInit + 2;
 
     return 0;
 }

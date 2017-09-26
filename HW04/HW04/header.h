@@ -32,6 +32,9 @@ public:
 	friend class programmer;
 	friend class architect;
 	friend bool checkPhoneNumbers(employee, programmer);
+	//Operator overloading
+	bool operator ==(employee a);
+	void operator +(const int);
 	//default and initialized constructors
 	employee();
 	employee(string name, int id, string phoneNumber, int age, string gender, string jobTitle, string salary, date hireDate);
@@ -47,6 +50,7 @@ public:
 	//function prototyped due to longer definition
 	//prints a formated piece of text with all relevant information
 	void print();
+	void addAge(int);
 };
 
 //programmer class is derived from and is friend of employee class
@@ -84,4 +88,5 @@ public:
 	void print();
 };
 
+//checks phone numbers of object types employee and programmer
 bool checkPhoneNumbers(employee, programmer);

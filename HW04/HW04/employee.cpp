@@ -38,3 +38,20 @@ employee::employee(string name, int id, string phoneNumber, int age, string gend
 	csalary = salary;
 	chireDate = hireDate;
 }
+//definition of overloading operator
+bool employee::operator==(employee a)
+{
+	return this->cphoneNumber == a.cphoneNumber;
+}
+//definition of addAge function
+void employee::addAge(int a)
+{
+	this->cage += a;
+	cout << "There were " << a << " years added!" << endl;
+}
+//definition of overloading the plus operator
+void employee::operator+(const int a)
+{
+	this->cage += a;
+	cout << "There were " << a << " years added!" << endl;
+}
