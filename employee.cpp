@@ -65,6 +65,51 @@ ostream & operator<<(ostream & output, const employee & d)
 	output << "Gender: " << d.cgender << endl;
 	output << "Job Title: " << d.cjobTitle << endl;
 	output << "Salary: " << d.csalary << endl;
+	employee b = d;
+	output << "Hire date: " << (b.chireDate.get()) << endl;
 	return output;
 	
+}
+
+istream & operator>>(istream & input, employee &d)
+{
+	string tempstring;
+	int tempint, two, three;
+	cout << "Enter employee Name: ";
+	input >> tempstring;
+	d.changeName(tempstring);
+
+	cout << "Enter employee ID: ";
+	input >> tempint;
+	d.changeID(tempint);
+
+	cout << "Enter employee Phone Number (xxx-xxx-xxxx): ";
+	input >> tempstring;
+	d.changePhoneNumber(tempstring);
+
+	cout << "Enter employee Age: ";
+	input >> tempint;
+	d.changeAge(tempint);
+
+	cout << "Enter employee Gender: ";
+	input >> tempstring;
+	d.changeGender(tempstring);
+
+	cout << "Enter employee Job Title: ";
+	input >> tempstring;
+	d.changeJobTitle(tempstring);
+
+	cout << "Enter employee Salary: ";
+	input >> tempstring;
+	d.changeSalary(tempstring);
+
+	cout << "Enter employee Hire Date Month: ";
+	input >> tempint;
+	cout << "Enter employee Hire Date Day: ";
+	input >> two;
+	cout << "Enter employee Hire Date Year: ";
+	input >> three;
+	d.changeHireDate(tempint, two, three);
+
+	return input;
 }

@@ -36,6 +36,7 @@ public:
 	friend bool checkPhoneNumbers(employee, programmer);
 	//Operator overloading
 	friend ostream &operator << (ostream &output, const employee& d);
+	friend istream & operator >> (istream &input, employee& d);
 	//Operator overloading
 	bool operator ==(employee a);
 	void operator +(const int);

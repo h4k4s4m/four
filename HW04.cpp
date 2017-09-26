@@ -53,7 +53,13 @@ int main()
 	empInit.addAge(4);
 	empInit + 2;
 
-	cout << empInit;
+	cout << empInit<<endl;
+	cin >> empInit;
+	cout << empInit<<endl;
+	cin.clear();
+	cin.ignore(INT_MAX, '\n');
+	cin.ignore();
+	
 
     return 0;
 }
